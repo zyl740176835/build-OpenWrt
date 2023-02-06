@@ -9,6 +9,10 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
+# Modify default IP  
+sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/files/bin/config_generate
+#find  feeds/luci/applications/ -name luci-app-easymesh -exec rm -rf {} \;
+#git clone https://github.com/zyl740176835/luci-app-easymesh feeds/luci/applications/luci-app-easymesh
 
-# Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+
+
